@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>我的信息</div>
+  <div style="background-color: bisque">我的信息</div>
 </template>
 <style></style>

@@ -1,8 +1,6 @@
 <template>
-  <div>
-    首页
-    <a-button>点我</a-button>
-  </div>
+  <div style="background-color: bisque">首页</div>
+  和好
 </template>
 
 <script setup lang="ts">

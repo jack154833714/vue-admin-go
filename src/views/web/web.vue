@@ -5,6 +5,6 @@ defineOptions({
 </script>
 
 <template>
-  <router-view></router-view>
+  <router-view style="background-color: aquamarine"></router-view>
 </template>
 <style></style>
