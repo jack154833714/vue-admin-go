@@ -8,6 +8,22 @@ import {
   IconDown
 } from '@arco-design/web-vue/es/icon'
 
+import type {Component} from "vue"
+
+interface Menutype {
+  key: string,
+  title: string,
+  icon?: Component,
+  name?: string,
+  child: Menutype
+}
+
+const menuList: Menutype[] [
+  {
+    key: "1",title: "首页",
+  }
+  ]
+
 defineOptions({
   name: 'adminPage'
 })
@@ -24,30 +40,35 @@ defineOptions({
       </div>
       <div class="gvb_menu">
         <A-menu :default-open-keys="['0']" :default-selected-keys="['0_2']">
-          <A-sub-menu key="0">
-            <template #icon><icon-apps></icon-apps></template>
-            <template #title>Navigation 1</template>
-            <A-menu-item key="0_0">Menu 1</A-menu-item>
-            <A-menu-item key="0_1">Menu 2</A-menu-item>
-            <A-menu-item key="0_2">Menu 3</A-menu-item>
-            <A-menu-item key="0_3">Menu 4</A-menu-item>
-          </A-sub-menu>
+
+            <A-menu-item key="0">
+              <template #icon><icon-apps></icon-apps></template>
+              首页
+            </A-menu-item>
           <A-sub-menu key="1">
             <template #icon><icon-bug></icon-bug></template>
-            <template #title>Navigation 2</template>
-            <A-menu-item key="1_0">Menu 1</A-menu-item>
-            <A-menu-item key="1_1">Menu 2</A-menu-item>
-            <Amenu-item key="1_2">Menu 3</Amenu-item>
+            <template #title>个人中心</template>
+            <A-menu-item key="1_0">我的信息</A-menu-item>
           </A-sub-menu>
           <A-sub-menu key="2">
             <template #icon><icon-bulb></icon-bulb></template>
-            <template #title>Navigation 3</template>
-            <a-menu-item key="2_0">Menu 1</a-menu-item>
-            <a-menu-item key="2_1">Menu 2</a-menu-item>
-            <a-sub-menu key="2_2" title="Navigation 4">
-              <a-menu-item key="2_2_0">Menu 1</a-menu-item>
-              <a-menu-item key="2_2_1">Menu 2</a-menu-item>
-            </a-sub-menu>
+            <template #title>文章管理</template>
+            <a-menu-item key="2_0">文章列表</a-menu-item>
+          </A-sub-menu>
+          <A-sub-menu key="3">
+            <template #icon><icon-bulb></icon-bulb></template>
+            <template #title>用户管理</template>
+            <a-menu-item key="3_0">用户列表</a-menu-item>
+          </A-sub-menu>
+          <A-sub-menu key="4">
+            <template #icon><icon-bulb></icon-bulb></template>
+            <template #title>群聊管理</template>
+            <a-menu-item key="3_0">群聊列表</a-menu-item>
+          </A-sub-menu>
+          <A-sub-menu key="5">
+            <template #icon><icon-bulb></icon-bulb></template>
+            <template #title>系统管理</template>
+            <a-menu-item key="3_0">菜单列表</a-menu-item>
           </A-sub-menu>
         </A-menu>
       </div>
